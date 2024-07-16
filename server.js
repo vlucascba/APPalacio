@@ -1,10 +1,9 @@
-// server.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const { sequelize } = require('./models');
-//const routes = require('./routes'); // Importa las rutas
+const localRoutes = require('./routes/localRoutes'); // Importa las rutas específicas
 
 dotenv.config();
 
@@ -16,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Usar las rutas
-//app.use('/api', routes); // Usa las rutas
+app.use('/locals', localRoutes); // Usa las rutas específicas
 
 // Sincronizar la base de datos y arrancar el servidor
 sequelize.sync().then(() => {

@@ -8,19 +8,19 @@ const authRoutes = require('./authRoutes'); // Importa las rutas de autenticaci�
 
 // Ruta principal
 router.get('/', (req, res) => {
-  res.send('Bienvenido a la API de EL PALACIO DEL SANDWICH');
-});
-
-// Rutas de autenticación
-router.use('/auth', authRoutes);
-
-// Rutas para Local
-router.use('/locals', localRoutes);
-
-// Rutas para Variedad
-router.use('/variedades', variedadRoutes);
-
-// Rutas para Venta
-router.use('/ventas', ventaRoutes);
-
-module.exports = router;
+    res.send('Bienvenido a la API de EL PALACIO DEL SANDWICH');
+  });
+  
+  // Rutas de autenticación
+  router.use('/auth', authRoutes);
+  
+  // Rutas para Local
+  router.use('/locals', localRoutes);
+  
+  // Rutas para Variedad
+  router.use('/variedades', variedadRoutes);
+  
+  // Rutas para Venta
+  router.use('/ventas', ventaRoutes);
+  
+  module.exports = router;

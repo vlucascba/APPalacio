@@ -19,9 +19,42 @@ const createLocal = async (req, res) => {
   }
 };
 
-// Otros métodos CRUD (update, delete) pueden ser agregados aquí
+const updateLocal = async (req, res) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+
+  try {
+    const local = await Local.findByPk(id);
+    if (!local) {
+      return res.status(404).json({ message: 'Local no encontrado' });
+    }
+
+    await local.update(updatedData);
+    res.status(200).json({ message: 'Local actualizado', data: local });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+const deleteLocal = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const local = await Local.findByPk(id);
+    if (!local) {
+      return res.status(404).json({ message: 'Local no encontrado' });
+    }
+
+    await local.destroy();
+    res.status(200).json({ message: 'Local eliminado' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 module.exports = {
   getAllLocals,
-  createLocal
+  createLocal,
+  updateLocal,
+  deleteLocal
 };
