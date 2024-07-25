@@ -1,0 +1,51 @@
+/* styles.css */
+nav ul li a {
+    display: flex;
+    margin: 5px;
+    padding: 7px;
+    background-color: #1d9612;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    justify-content: center;
+    font-weight:600;
+}
+
+ul {
+    list-style: none;
+    padding: 0 5%;
+}
+nav ul li a:hover {
+    background-color: #84ed64;
+    transition: background-color 1s ease;;
+    color: black;
+}
+
+header h1 {
+    display: flex;
+    font-size:large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    color: rgb(217, 220, 72);
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer img {
+    width: 50%;
+    height: 50%;
+}
+
+body {
+    background-color: black;
+}

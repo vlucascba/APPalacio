@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones - El Palacio de los Sándwiches</title>
+    <script src="src\index.js"></script>
+    <link rel="stylesheet" href="/public/css/variedades.css">
+</head>
+<body>
+    <h2>Promociones</h2>
+<div>
+    <ul>
+        <li><a href="index.html">Menu principal</a></li>
+    </ul>
+</div>
+    <form id="orderForm">
+        <label>
+            <input type="radio" name="breadType" value="blanco" checked> Pan Blanco
+        </label>
+        <label>
+            <input type="radio" name="breadType" value="negro"> Pan Negro
+        </label>
+
+        <div>
+            <input type="number" name="quantity" id="quantity" value="1" min="1">
+        </div>
+
+        <label>
+            <input type="radio" name="quantityType" value="unidad" checked> Por Unidad ($5)
+        </label>
+        <label>
+            <input type="radio" name="quantityType" value="mediaDocena"> Media Docena ($25)
+        </label>
+        <label>
+            <input type="radio" name="quantityType" value="docena"> Docena ($45)
+        </label>
+
+    </form>
+    <form id="orderForm">
+        <!-- ...otros campos del formulario... -->
+
+        <h3>Método de Pago</h3>
+        <label>
+            <input type="radio" name="paymentMethod" value="efectivo" checked> Efectivo
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="transferencia"> Transferencia
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="tarjetaCredito"> Tarjeta de Crédito
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="tarjetaDebito"> Tarjeta de Débito
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="qr"> QR
+        </label>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+    <footer>
+        <img src="/public/img/logo.png" alt=" Logo el palacio del sandwich">
+        <p>© 1949 El Palacio del Sándwich. </p>
+    </footer>
+</body>
+</html>
